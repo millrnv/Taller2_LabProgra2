@@ -4,13 +4,14 @@ import java.util.List;
 
 public class Votante {
 
-    private String nombre, rut, getnTelefonico;
+    private String nombre, rut, nTelefonico, preferenciaPolitica;
     private List<Votante> votantes;
 
-    public Votante(String nombre, String rut, String getnTelefonico) {
+    public Votante(String nombre, String rut, String nTelefonico, String preferenciaPolitica) {
         this.nombre = nombre;
         this.rut = rut;
-        this.getnTelefonico = getnTelefonico;
+        this.nTelefonico = nTelefonico;
+        this.preferenciaPolitica = preferenciaPolitica;
     }
 
     public String getNombre() {
@@ -22,7 +23,7 @@ public class Votante {
     }
 
     public String getnTelefonico() {
-        return getnTelefonico;
+        return nTelefonico;
     }
 
     public void setNombre(String nombre) {
@@ -34,12 +35,19 @@ public class Votante {
     }
 
     public void setnTelefonico(String getnTelefonico) {
-        this.getnTelefonico = getnTelefonico;
+        this.nTelefonico = getnTelefonico;
     }
 
+    public String getPreferenciaPolitica() {
+        return preferenciaPolitica;
+    }
+
+    public void setPreferenciaPolitica(String preferenciaPolitica) {
+        this.preferenciaPolitica = preferenciaPolitica;
+    }
     @Override
     public String toString() {
-        return "Votante{" + "nombre=" + nombre + ", rut=" + rut + ", getnTelefonico=" + getnTelefonico + '}';
+        return "Votante{" + "nombre=" + nombre + ", rut=" + rut + ", getnTelefonico=" + nTelefonico + '}';
     }
 
 

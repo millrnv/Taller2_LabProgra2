@@ -8,6 +8,7 @@ public class Eleccion {
 
     //atributo nombre de la eleccion, fecha, lugar donde se llevará a cabo y los candidatos que participaran
     private String nombre, lugar;
+
     private Date fecha;
     private List<Candidato> candidatos;
     private List<Votante> votantes;
@@ -15,9 +16,11 @@ public class Eleccion {
     //constructor de la clase
     public Eleccion(String nombre, Date fecha, String lugar) {
         this.nombre = nombre;
+
         this.fecha = fecha;
         this.lugar = lugar;
         this.candidatos = new ArrayList<Candidato>();
+        this.votantes = new ArrayList<Votante>();
     }
 
     //getters y setters
@@ -29,6 +32,7 @@ public class Eleccion {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
 
     public Date getFecha() {
         return fecha;

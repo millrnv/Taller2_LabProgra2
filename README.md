@@ -1,3 +1,11 @@
+La problemática solución de la problemática trae 6 packages, los cuales son:
+-controller: contiene el controlador de elecciones.
+-gui: contiene las ventanas.
+-model: dentro de este se encuentra el package data y dentro se encuentra el package dao.
+-principal: contiene el main.
+
+A continuación se dará una explicación a grandes rasgos de las principales clases que existen en el programa.
+
 ##Clases:
 
 Elección: Es la clase que representa una elección, contiene como atributos el nombre de la elección, la fecha, lugar y los condidatos que participaran en ella.

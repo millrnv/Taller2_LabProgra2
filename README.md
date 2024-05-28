@@ -1,4 +1,4 @@
-#Clases:
+##Clases:
 
 Elección: Es la clase que representa una elección, contiene como atributos el nombre de la elección, id de la elección, la fecha, lugar y los condidatos que participaran en ella.
 

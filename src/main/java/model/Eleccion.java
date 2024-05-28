@@ -8,7 +8,6 @@ public class Eleccion {
 
     //atributo nombre de la eleccion, fecha, lugar donde se llevará a cabo y los candidatos que participaran
     private String nombre, lugar;
-
     private Date fecha;
     private List<Candidato> candidatos;
     private List<Votante> votantes;

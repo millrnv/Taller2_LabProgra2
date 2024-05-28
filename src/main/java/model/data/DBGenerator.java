@@ -55,10 +55,10 @@ public class DBGenerator {
 
     private static void crearTablaCandidato(DSLContext create) {
         create.createTableIfNotExists("Candidato")
-                .column("rut", VARCHAR(12))
-                .column("nombreCompleto", VARCHAR(100))
+                .column("nombre", VARCHAR(100))
+                .column("rut", VARCHAR(15))
                 .column("partidoPolitico", VARCHAR(50))
-                .column("cargoQueAspira", VARCHAR(50))
+                .column("cargo", VARCHAR(50))
                 .constraint(primaryKey("rut"))
                 .execute();
     }
@@ -66,8 +66,8 @@ public class DBGenerator {
 
     private static void crearTablaVotante(DSLContext create) {
         create.createTableIfNotExists("Votante")
-                .column("nombre", VARCHAR(12))
-                .column("rut", VARCHAR(100))
+                .column("nombre", VARCHAR(100))
+                .column("rut", VARCHAR(12))
                 .column("nTelefonico", VARCHAR(12))
                 .column("preferenciaPolitica", VARCHAR(50))
                 .constraint(primaryKey("rut"))
@@ -77,13 +77,12 @@ public class DBGenerator {
 
     private static void crearTablaVoto(DSLContext create) {
         create.createTableIfNotExists("Voto")
-                .column("candidatoElegido", VARCHAR(20))
-                .column("fecha", VARCHAR(50))
+                .column("candidatoElegido", VARCHAR(100))
+                .column("fecha", VARCHAR(25))
                 .constraint(primaryKey("fecha"))
                 .execute();
     }
 
-    // relaciona dos tablas a traves de una clave foranea, usar solo si se relacionan tablas
     private static void relacionarTabla(DSLContext create, String nombreTabla, String claveForanea, String nombreTablaRelacion) {
         create.alterTableIfExists(nombreTabla).alterConstraint(foreignKey(claveForanea).references(nombreTablaRelacion)).enforced();
     }
